@@ -65,7 +65,7 @@ img{max-width:100%;display:block}
 .site-header.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 16px rgba(62,46,109,.08);border-bottom-color:var(--n100)}
 .nav{max-width:var(--maxw);margin:0 auto;padding:0 var(--px);height:72px;display:flex;align-items:center;gap:2rem}
 .nav .logo{flex-shrink:0;display:flex;align-items:center}
-.nav .logo svg{height:42px;width:auto}
+.nav .logo img{height:50px;width:auto;display:block}
 .nav-links{display:flex;gap:1.7rem;flex:1;justify-content:center;list-style:none}
 .nav-links a{font-size:.9rem;font-weight:500;color:var(--n500);border-bottom:2px solid transparent;padding-bottom:2px;transition:.2s}
 .nav-links a:hover,.nav-links a.active{color:var(--pink);border-bottom-color:var(--pink)}
@@ -162,7 +162,7 @@ img{max-width:100%;display:block}
 @media(max-width:760px){.footer-grid{grid-template-columns:1fr;gap:2rem}}
 .site-footer h4{color:#fff;font-family:var(--fbody);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
 .site-footer .flogo{margin-bottom:1rem}
-.site-footer .flogo svg{height:40px}
+.site-footer .flogo img{height:52px;width:auto;display:block}
 .site-footer p{font-size:.9rem;line-height:1.7;margin-bottom:.5rem}
 .footer-links{list-style:none}
 .footer-links li{margin-bottom:.5rem}
@@ -179,14 +179,7 @@ img{max-width:100%;display:block}
 <body>
 <header class="site-header" id="siteHeader">
   <nav class="nav">
-    <a href="index.html" class="logo" aria-label="Van der Burg Coaching home"><svg viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Van der Burg Coaching">
-<defs><linearGradient id="lgl" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0" stop-color="#f7588e"/><stop offset="0.5" stop-color="#7b5ea7"/><stop offset="1" stop-color="#4ab9d8"/></linearGradient></defs>
-<circle cx="26" cy="28" r="19" fill="none" stroke="url(#lgl)" stroke-width="4"/>
-<path d="M18 20 L26 38 L34 20" fill="none" stroke="url(#lgl)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="58" y="27" font-family="Roboto Slab, Georgia, serif" font-size="21" font-weight="600" fill="#3E2E6D">Van der Burg</text>
-<text x="59" y="45" font-family="Roboto, Arial, sans-serif" font-size="9.5" font-weight="500" letter-spacing="3" fill="#7a7a7a">COACHING &amp; RELATIETHERAPIE</text>
-</svg></a>
+    <a href="index.html" class="logo" aria-label="Van der Burg Coaching home"><img src="assets/vanderburg-logo.svg" alt="Van der Burg Coaching &amp; Relatietherapie"></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="over-deborah.html">Over Deborah</a></li>
@@ -265,14 +258,7 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="flogo"><svg viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Van der Burg Coaching">
-<defs><linearGradient id="lgd" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0" stop-color="#f7588e"/><stop offset="0.5" stop-color="#7b5ea7"/><stop offset="1" stop-color="#4ab9d8"/></linearGradient></defs>
-<circle cx="26" cy="28" r="19" fill="none" stroke="url(#lgd)" stroke-width="4"/>
-<path d="M18 20 L26 38 L34 20" fill="none" stroke="url(#lgd)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="58" y="27" font-family="Roboto Slab, Georgia, serif" font-size="21" font-weight="600" fill="#fffef9">Van der Burg</text>
-<text x="59" y="45" font-family="Roboto, Arial, sans-serif" font-size="9.5" font-weight="500" letter-spacing="3" fill="#9a8d7e">COACHING &amp; RELATIETHERAPIE</text>
-</svg></div>
+        <div class="flogo"><img src="assets/vanderburg-logo-white.svg" alt="Van der Burg Coaching"></div>
         <p>Waar zelfkennis de basis vormt voor groei. Ontdek wie je bent en versterk je relaties.</p>
         <div class="social">
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
