@@ -61,8 +61,8 @@ img{max-width:100%;display:block}
 .btn-white{background:#fff;color:var(--purple)}
 .btn-white:hover{background:var(--purple-50);color:var(--purple);transform:translateY(-2px)}
 /* Header */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:300;transition:all .3s;border-bottom:1px solid transparent}
-.site-header.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 2px 16px rgba(62,46,109,.08);border-bottom-color:var(--n100)}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:300;border-bottom:1px solid transparent;
+  transition:background .15s linear,backdrop-filter .15s linear,box-shadow .15s linear,border-color .15s linear}
 .nav{max-width:var(--maxw);margin:0 auto;padding:0 var(--px);height:72px;display:flex;align-items:center;gap:2rem}
 .nav .logo{flex-shrink:0;display:flex;align-items:center}
 .nav .logo img{height:50px;width:auto;display:block}
@@ -90,6 +90,22 @@ img{max-width:100%;display:block}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
 .hero.center-hero .hero-actions{justify-content:center}
 .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+/* Hero met foto */
+.hero.split{text-align:left}
+.hero.split .container{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center;max-width:1140px}
+.hero-photo{border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/5;max-height:540px}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:820px){.hero.split .container{grid-template-columns:1fr}.hero.split{text-align:center}.hero.split .hero-actions{justify-content:center}.hero-photo{max-width:340px;margin:1.5rem auto 0}}
+/* Foto-band (afbeelding + tekst naast elkaar) */
+.imgband .container{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+.imgband-photo{border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:3/2}
+.imgband-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.imgband-txt .label{display:block;margin-bottom:.7rem}
+.imgband-txt h2{margin-bottom:1rem}
+.imgband-txt p{color:var(--n500);margin-bottom:1rem}
+.imgband.rev .imgband-photo{order:2}
+.imgband.rev .imgband-txt{order:1}
+@media(max-width:820px){.imgband .container{grid-template-columns:1fr}.imgband.rev .imgband-photo,.imgband.rev .imgband-txt{order:0}.imgband-photo{aspect-ratio:3/2}}
 /* Cards grid */
 .grid{display:grid;gap:1.5rem}
 .grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
@@ -200,15 +216,18 @@ img{max-width:100%;display:block}
   </div>
 </header>
 <main>
-<section class="hero center-hero">
+<section class="hero split">
   <div class="container">
-    <span class="label">Verbind · Herstel &amp; Begrijp</span>
-    <h1>Zicht op jezelf.<br><span class="grad-text">Begrip voor elkaar.</span></h1>
-    <p class="lead">Voor wie vastloopt in zichzelf, in verbinding of met de ander. Als je alles al geprobeerd hebt — praten, aanpassen, wachten, hopen dat het beter gaat — en het werkt nog steeds niet… dan is het tijd voor een volgende stap.</p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn btn-cta">Gratis Kennismaking</a>
-      <a href="diensten.html" class="btn btn-ghost">Bekijk diensten</a>
+    <div class="hero-txt">
+      <span class="label">Verbind · Herstel &amp; Begrijp</span>
+      <h1>Zicht op jezelf.<br><span class="grad-text">Begrip voor elkaar.</span></h1>
+      <p class="lead">Voor wie vastloopt in zichzelf, in verbinding of met de ander. Als je alles al geprobeerd hebt — praten, aanpassen, wachten, hopen dat het beter gaat — en het werkt nog steeds niet… dan is het tijd voor een volgende stap.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-cta">Gratis Kennismaking</a>
+        <a href="diensten.html" class="btn btn-ghost">Bekijk diensten</a>
+      </div>
     </div>
+    <div class="hero-photo"><img src="images/deborah-warm.webp" alt="Deborah van der Burg — coach en relatietherapeute in Noordwijk" ></div>
   </div>
 </section>
 
@@ -239,6 +258,13 @@ img{max-width:100%;display:block}
         <a class="more" href="contact.html">Plan een gesprek →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section imgband rev">
+  <div class="container">
+    <div class="imgband-photo"><img src="images/deborah-elegant.webp" alt="Deborah van der Burg in gesprek" loading="lazy"></div>
+    <div class="imgband-txt"><span class="label">Over Deborah</span><h2>Persoonlijk, betrokken en resultaatgericht</h2><p>Met 18 jaar ervaring in het bedrijfsleven en een eigen weg van burn-out naar balans, help ik je patronen doorbreken en authentiek leven. Geen vage theorieën — wel concrete handvatten die echt werken.</p><a href="over-deborah.html" class="btn btn-ghost" style="margin-top:.4rem">Lees mijn verhaal</a></div>
   </div>
 </section>
 
@@ -355,8 +381,18 @@ img{max-width:100%;display:block}
 <script>
 (function(){
   var h=document.getElementById('siteHeader');
-  function onScroll(){h.classList.toggle('scrolled',window.scrollY>40);}
-  window.addEventListener('scroll',onScroll);onScroll();
+  // Progressieve blur/achtergrond: van volledig transparant (boven) naar
+  // volledig blurry/wit tegen de tijd dat de eerste tekst onder het menu schuift.
+  var RAMP=120; // px waarover het effect opbouwt (vol effect zodra tekst onder het menu schuift)
+  function onScroll(){
+    var t=Math.min(Math.max(window.scrollY,0)/RAMP,1);
+    h.style.background='rgba(255,255,255,'+(t*0.97).toFixed(3)+')';
+    var blur='blur('+(t*12).toFixed(2)+'px)';
+    h.style.backdropFilter=blur; h.style.webkitBackdropFilter=blur;
+    h.style.boxShadow=t>0.02?('0 2px 16px rgba(62,46,109,'+(t*0.10).toFixed(3)+')'):'none';
+    h.style.borderBottomColor='rgba(240,240,240,'+t.toFixed(3)+')';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
   var burger=document.getElementById('hamburger'),menu=document.getElementById('mobileMenu');
   burger.addEventListener('click',function(){
     var open=menu.classList.toggle('open');
