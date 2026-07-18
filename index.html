@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Van der Burg Coaching & Relatietherapie — Noordwijk</title>
 <meta name="description" content="Relatietherapie en coaching in Noordwijk en Zuid-Holland. Zicht op jezelf, begrip voor elkaar. Plan een gratis kennismakingsgesprek met Deborah van der Burg.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
 <link rel="canonical" href="https://vanderburgcoaching.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
@@ -49,6 +51,9 @@ img{max-width:100%;display:block}
 .sec-head{max-width:640px;margin:0 auto 2.5rem;text-align:center}
 .sec-head .label{margin-bottom:.75rem;display:block}
 .sec-head h2{margin-bottom:.75rem}
+.contact-inline{margin-top:.6rem}
+.contact-inline a{font-weight:600;color:var(--purple)}
+.contact-inline a:hover{color:var(--pink)}
 /* Buttons */
 .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fbody);font-size:.9rem;font-weight:700;
   padding:.8rem 1.6rem;border-radius:50px;transition:all .25s;cursor:pointer;border:none;line-height:1}
@@ -207,14 +212,14 @@ img{max-width:100%;display:block}
 .social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;transition:.2s}
 .social a:hover{background:var(--grad);color:#fff;transform:translateY(-2px)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:1.5rem;text-align:center;font-size:.82rem;color:rgba(255,255,255,.5)}
-/* Zwevende WhatsApp-knop */
-.wa-float{position:fixed;bottom:22px;right:22px;z-index:400;width:58px;height:58px;border-radius:50%;
-  background:#25D366;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 20px rgba(37,211,102,.45);transition:transform .2s,box-shadow .2s;animation:wa-pop .4s ease}
-.wa-float:hover{transform:scale(1.08);box-shadow:0 10px 30px rgba(37,211,102,.6)}
-.wa-float svg{width:32px;height:32px;fill:#fff}
-@keyframes wa-pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
-@media(max-width:600px){.wa-float{width:52px;height:52px;bottom:16px;right:16px}.wa-float svg{width:28px;height:28px}}
+/* Zwevende WhatsApp-knop (pil met tekst) */
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:400;display:inline-flex;align-items:center;gap:10px;
+  padding:12px 20px 12px 14px;border-radius:50px;background:#25D366;color:#fff;font-weight:600;font-size:.95rem;
+  text-decoration:none;box-shadow:0 6px 20px rgba(37,211,102,.45);transition:transform .2s,box-shadow .2s,background .2s;animation:wa-pop .4s ease}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,211,102,.6);background:#1fb955;color:#fff}
+.wa-float svg{width:26px;height:26px;fill:#fff;flex-shrink:0}
+@keyframes wa-pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+@media(max-width:600px){.wa-float{bottom:16px;right:16px;padding:11px 16px 11px 12px;font-size:.85rem}.wa-float svg{width:23px;height:23px}}
 /* Contactformulier (mailto) */
 .form-note{font-size:.82rem;color:var(--n400);margin-top:.9rem;text-align:center;line-height:1.5}
 .contact-alt{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
@@ -264,8 +269,8 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="hero-txt">
       <span class="label">Verbind · Herstel &amp; Begrijp</span>
-      <h1>Zicht op jezelf.<br><span class="grad-text">Begrip voor elkaar.</span></h1>
-      <p class="lead">Voor wie vastloopt in zichzelf, in verbinding of met de ander. Als je alles al geprobeerd hebt — praten, aanpassen, wachten, hopen dat het beter gaat — en het werkt nog steeds niet… dan is het tijd voor een volgende stap.</p>
+      <h1>Voor: wie vastloopt in zichzelf, in verbinding of met <span class="grad-text">de ander</span>.</h1>
+      <p class="lead">Als je alles al geprobeerd hebt — praten, aanpassen, wachten, hopen dat het beter gaat — en het werkt nog steeds niet… dan is het tijd voor een volgende stap. Niet door vol te houden, te vechten of te hopen dat het beter wordt — maar door te kijken wat wél werkt.</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn-cta">Gratis Kennismaking</a>
         <a href="diensten.html" class="btn btn-ghost">Bekijk diensten</a>
@@ -278,9 +283,10 @@ img{max-width:100%;display:block}
 <section class="section tint">
   <div class="container">
     <div class="sec-head">
-      <span class="label">Waarom Van der Burg</span>
-      <h2>Ervaring waar je op kunt bouwen</h2>
-      <p class="lead">Jarenlange ervaring, honderden begeleide mensen en een warme, persoonlijke aanpak — met beide benen in de praktijk.</p>
+      <span class="label">Van der Burg Coaching &amp; Relatietherapie</span>
+      <h2>Zicht op jezelf. Begrip voor elkaar.</h2>
+      <p class="lead">Of je nu worstelt met jezelf of met je relatie: ik help je om te begrijpen wat er speelt en wat je kunt doen — zonder oordeel, mét resultaat.</p>
+      <a href="over-deborah.html" class="btn btn-ghost" style="margin-top:.4rem">Lees meer</a>
     </div>
     <div class="stat-grid">
       <div class="stat"><div class="num grad-text stat-num" data-target="300" data-suffix="+">0</div><div class="lbl">Mensen geholpen</div></div>
@@ -294,36 +300,30 @@ img{max-width:100%;display:block}
   <div class="container">
     <div class="sec-head">
       <span class="label">Hoe kan ik je helpen?</span>
-      <h2>Van der Burg Coaching &amp; Relatietherapie</h2>
-      <p class="lead">Waar bewustwording leidt tot begrijpen. Vanuit mijn praktijk in Noordwijk help ik professionals en stellen in Zuid-Holland hun patronen doorbreken en authentiek leven — met 18 jaar ervaring uit het bedrijfsleven.</p>
+      <h2>Ontdek welke vorm van begeleiding bij jou past</h2>
+      <p class="lead">Of je nu vastloopt in je relatie of in jezelf — ik help je begrijpen wat er speelt en hoe je daarin verder kunt. Individueel of samen.</p>
+      <p class="contact-inline"><a href="tel:+31851249076">📞 Neem contact op — 085 - 12 49 076</a></p>
     </div>
     <div class="grid grid-3">
       <div class="card">
         <div class="ico">💛</div>
         <h3>Relatietherapie</h3>
         <p>Voor stellen die elkaar zijn kwijtgeraakt in het gedoe van het dagelijks leven. Herstel de verbinding, het vertrouwen en de nabijheid met EFT-relatietherapie.</p>
-        <a class="more" href="diensten.html">Meer over relatietherapie →</a>
+        <a class="more" href="relatietherapie.html">Meer over relatietherapie →</a>
       </div>
       <div class="card">
         <div class="ico">🌱</div>
         <h3>Individuele coaching</h3>
         <p>Voor professionals die steeds dezelfde patronen herhalen in relaties, werk of persoonlijke zaken. Ontdek waarom je doet wat je doet en neem de regie terug.</p>
-        <a class="more" href="diensten.html">Meer over coaching →</a>
+        <a class="more" href="individuele-coaching.html">Meer over coaching →</a>
       </div>
       <div class="card">
         <div class="ico">☕</div>
         <h3>Gratis kennismaking</h3>
         <p>Een vrijblijvend kennismakingsgesprek van 30 minuten (individueel) of 60 minuten (relatie). Eerste inzichten die je direct kunt gebruiken — en een wederzijdse check.</p>
-        <a class="more" href="contact.html">Plan een gesprek →</a>
+        <a class="more" href="kennismaking.html">Plan een gesprek →</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="section imgband rev">
-  <div class="container">
-    <div class="imgband-photo"><img src="images/deborah-elegant.webp" alt="Deborah van der Burg in gesprek" loading="lazy"></div>
-    <div class="imgband-txt"><span class="label">Over Deborah</span><h2>Persoonlijk, betrokken en resultaatgericht</h2><p>Met 18 jaar ervaring in het bedrijfsleven en een eigen weg van burn-out naar balans, help ik je patronen doorbreken en authentiek leven. Geen vage theorieën — wel concrete handvatten die echt werken.</p><a href="over-deborah.html" class="btn btn-ghost" style="margin-top:.4rem">Lees mijn verhaal</a></div>
   </div>
 </section>
 
@@ -412,9 +412,8 @@ img{max-width:100%;display:block}
         <div class="flogo"><img src="assets/vanderburg-logo-white.svg" alt="Van der Burg Coaching"></div>
         <p>Waar zelfkennis de basis vormt voor groei. Ontdek wie je bent en versterk je relaties.</p>
         <div class="social">
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
-          <a href="https://open.spotify.com/" target="_blank" rel="noopener" aria-label="Spotify">♪</a>
+          <a href="https://www.linkedin.com/in/deborah-van-der-burg-27343b9/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.instagram.com/vanderburg_coaching/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
         </div>
       </div>
       <div>
@@ -438,7 +437,7 @@ img{max-width:100%;display:block}
       </div>
       <div class="footer-contact">
         <h4>Contact</h4>
-        <p>Offemweg 47<br>2202 BB Noordwijk</p>
+        <p>Offemweg 47<br>2201 HB Noordwijk</p>
         <p><a href="tel:+31851249076">085-1249076</a></p>
         <p><a href="mailto:deborah@vanderburgcoaching.com">deborah@vanderburgcoaching.com</a></p>
       </div>
@@ -446,7 +445,7 @@ img{max-width:100%;display:block}
     <div class="footer-bottom">© 2026 Van der Burg Coaching &amp; Relatietherapie · Noordwijk</div>
   </div>
 </footer>
-<a class="wa-float" href="https://wa.me/31851249076?text=Hoi%20Deborah%2C%20ik%20heb%20een%20vraag%20over%20coaching." target="_blank" rel="noopener" aria-label="Stuur een WhatsApp-bericht"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+<a class="wa-float" href="https://wa.me/31851249076?text=Hoi%20Deborah%2C%20ik%20heb%20een%20vraag." target="_blank" rel="noopener" aria-label="WhatsApp — Hoe kan ik je helpen?"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg><span>Hoe kan ik je helpen?</span></a>
 <script>
 (function(){
   var h=document.getElementById('siteHeader');
