@@ -111,6 +111,31 @@ img{max-width:100%;display:block}
 .hero-photo{border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/5;max-height:540px}
 .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:820px){.hero.split .container{grid-template-columns:1fr}.hero.split{text-align:center}.hero.split .hero-actions{justify-content:center}.hero-photo{max-width:340px;margin:1.5rem auto 0}}
+/* Full-bleed hero met achtergrondfoto (zoals de oude site) */
+.hero-bg{position:relative;min-height:min(86vh,720px);display:flex;align-items:center;overflow:hidden;
+  background-size:cover;background-position:center right;padding:calc(72px + clamp(2rem,5vw,4rem)) 0 clamp(3rem,6vw,5rem)}
+.hero-bg::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(95deg,rgba(248,244,250,.97) 0%,rgba(248,244,250,.9) 40%,rgba(248,244,250,.4) 66%,rgba(248,244,250,0) 100%)}
+.hero-bg-inner{position:relative;z-index:1;width:100%}
+.hero-bg-text{max-width:600px}
+.hero-bg .label{display:block;margin-bottom:1rem}
+.hero-bg h1{margin-bottom:1.25rem}
+.hero-bg .lead{margin-bottom:2rem;max-width:560px}
+.hero-bg .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.help-card{position:absolute;right:0;bottom:clamp(0.5rem,3vw,2rem);width:min(380px,92%);z-index:2;
+  background:#fff;border-radius:18px;box-shadow:var(--shadow-xl);padding:1.5rem 1.6rem;border-top:4px solid var(--pink)}
+.help-card h3{color:var(--purple);font-size:1.3rem;margin-bottom:.5rem}
+.help-card p{font-size:.92rem;color:var(--n500);line-height:1.6;margin-bottom:1.1rem}
+.help-contact{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.help-ico{width:44px;height:44px;flex-shrink:0;border-radius:12px;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-size:19px}
+.help-lbl{display:block;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--n400)}
+.help-num{display:block;font-size:1.15rem;font-weight:700;color:var(--purple)}
+@media(max-width:900px){
+  .hero-bg{min-height:0}
+  .hero-bg::before{background:linear-gradient(180deg,rgba(248,244,250,.95),rgba(248,244,250,.9))}
+  .hero-bg-text{max-width:none}
+  .help-card{position:static;width:100%;margin-top:2rem}
+}
 /* Foto-band (afbeelding + tekst naast elkaar) */
 .imgband .container{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,3.5rem);align-items:center}
 .imgband-photo{border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:3/2}
@@ -265,18 +290,25 @@ img{max-width:100%;display:block}
   </div>
 </header>
 <main>
-<section class="hero split">
-  <div class="container">
-    <div class="hero-txt">
+<section class="hero-bg" style="background-image:url('images/deborah-elegant.webp')">
+  <div class="container hero-bg-inner">
+    <div class="hero-bg-text">
       <span class="label">Verbind · Herstel &amp; Begrijp</span>
       <h1>Voor: wie vastloopt in zichzelf, in verbinding of met <span class="grad-text">de ander</span>.</h1>
-      <p class="lead">Als je alles al geprobeerd hebt — praten, aanpassen, wachten, hopen dat het beter gaat — en het werkt nog steeds niet… dan is het tijd voor een volgende stap. Niet door vol te houden, te vechten of te hopen dat het beter wordt — maar door te kijken wat wél werkt.</p>
+      <p class="lead">Als je alles al geprobeerd hebt — praten, aanpassen, wachten, hopen dat het beter gaat — en het werkt nog steeds niet… Dan is het tijd voor een volgende stap. Niet door vol te houden, te vechten of te hopen dat het beter wordt — maar door te kijken wat wél werkt.</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn-cta">Gratis Kennismaking</a>
         <a href="diensten.html" class="btn btn-ghost">Bekijk diensten</a>
       </div>
     </div>
-    <div class="hero-photo"><img src="images/deborah-warm.webp" alt="Deborah van der Burg — coach en relatietherapeute in Noordwijk" ></div>
+    <div class="help-card">
+      <h3>Hoe kan ik je helpen?</h3>
+      <p>Of je nu vastloopt in je relatie of in jezelf — ik help je begrijpen wat er speelt en hoe je daarin verder kunt.</p>
+      <a class="help-contact" href="tel:+31851249076">
+        <span class="help-ico">📞</span>
+        <span><span class="help-lbl">Neem contact op</span><span class="help-num">085 - 12 49 076</span></span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -299,10 +331,9 @@ img{max-width:100%;display:block}
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <span class="label">Hoe kan ik je helpen?</span>
+      <span class="label">Diensten</span>
       <h2>Ontdek welke vorm van begeleiding bij jou past</h2>
       <p class="lead">Of je nu vastloopt in je relatie of in jezelf — ik help je begrijpen wat er speelt en hoe je daarin verder kunt. Individueel of samen.</p>
-      <p class="contact-inline"><a href="tel:+31851249076">📞 Neem contact op — 085 - 12 49 076</a></p>
     </div>
     <div class="grid grid-3">
       <div class="card">
