@@ -14,6 +14,112 @@
 <meta property="og:title" content="Over Deborah van der Burg — Coach & Relatietherapeute Noordwijk">
 <meta property="og:description" content="Maak kennis met Deborah van der Burg: relatietherapeute en coach in Noordwijk. 18 jaar corporate ervaring, gecertificeerd in EFT en V-Cirkel, met eigen burn-out ervaring.">
 <meta property="og:url" content="https://vanderburgcoaching.com/over-deborah.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://vanderburgcoaching.com/#praktijk",
+      "name": "Van der Burg Coaching & Relatietherapie",
+      "description": "Relatietherapie (EFT) en coaching in Noordwijk, voor cliënten uit Noordwijk en de omliggende gemeenten in Zuid-Holland.",
+      "url": "https://vanderburgcoaching.com/",
+      "image": "https://vanderburgcoaching.com/images/hero-deborah.webp",
+      "telephone": "+31851249076",
+      "email": "deborah@vanderburgcoaching.com",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Offemweg 47",
+        "postalCode": "2201 HB",
+        "addressLocality": "Noordwijk",
+        "addressCountry": "NL"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Noordwijk"
+        },
+        {
+          "@type": "City",
+          "name": "Noordwijk aan Zee"
+        },
+        {
+          "@type": "City",
+          "name": "Voorhout"
+        },
+        {
+          "@type": "City",
+          "name": "Sassenheim"
+        },
+        {
+          "@type": "City",
+          "name": "Noordwijkerhout"
+        },
+        {
+          "@type": "City",
+          "name": "Oegstgeest"
+        },
+        {
+          "@type": "City",
+          "name": "Katwijk"
+        },
+        {
+          "@type": "City",
+          "name": "Rijnsburg"
+        },
+        {
+          "@type": "City",
+          "name": "Hillegom"
+        },
+        {
+          "@type": "City",
+          "name": "Lisse"
+        },
+        {
+          "@type": "City",
+          "name": "Wassenaar"
+        },
+        {
+          "@type": "City",
+          "name": "Leiden"
+        }
+      ],
+      "knowsAbout": [
+        "EFT-relatietherapie",
+        "Emotionally Focused Therapy",
+        "Relatietherapie",
+        "Individuele coaching",
+        "Burn-out coaching",
+        "V-Cirkel",
+        "Enneagram"
+      ],
+      "founder": {
+        "@id": "https://vanderburgcoaching.com/#deborah"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/deborah-van-der-burg-27343b9/",
+        "https://www.instagram.com/vanderburg_coaching/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://vanderburgcoaching.com/#deborah",
+      "name": "Deborah van der Burg",
+      "jobTitle": "Relatietherapeut & coach",
+      "worksFor": {
+        "@id": "https://vanderburgcoaching.com/#praktijk"
+      },
+      "url": "https://vanderburgcoaching.com/over-deborah.html",
+      "sameAs": [
+        "https://www.linkedin.com/in/deborah-van-der-burg-27343b9/",
+        "https://www.instagram.com/vanderburg_coaching/"
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- CMS:GA4:START --><!-- CMS:GA4:END -->
 <!-- CMS:JSONLD:START --><!-- CMS:JSONLD:END -->
 <style>
@@ -132,7 +238,7 @@ img{max-width:100%;display:block}
 .help-lbl{display:block;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--n400)}
 .help-num{display:block;font-size:1.15rem;font-weight:700;color:var(--purple)}
 @media(max-width:900px){
-  .hero-bg{min-height:0;flex-direction:column}
+  .hero-bg{min-height:0;flex-direction:column;background-size:cover!important}
   .hero-bg::before{background:linear-gradient(180deg,rgba(248,244,250,.95),rgba(248,244,250,.9))}
   .hero-bg-text{max-width:none}
   .help-card{position:static;width:auto;margin:2rem var(--px) 0}
@@ -189,6 +295,22 @@ img{max-width:100%;display:block}
 .tcard p{font-size:.95rem;color:var(--n500);line-height:1.7;font-style:italic;margin-bottom:1.1rem}
 .tcard .who{font-weight:700;color:var(--purple);font-size:.9rem}
 .tcard .where{font-size:.8rem;color:var(--n400)}
+.tcard-person{display:flex;align-items:center;gap:.8rem}
+.tcard-avatar{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:var(--shadow-sm)}
+/* FAQ accordion */
+.faq{max-width:760px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--n200)}
+.faq summary{cursor:pointer;font-family:var(--fdisplay);font-weight:600;color:var(--purple);font-size:1.08rem;padding:1.1rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--pink);font-size:1.5rem;line-height:1;flex-shrink:0}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{color:var(--n500);padding:0 0 1.2rem;line-height:1.75;margin:0}
+/* Werkgebied-regio's */
+.regio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+.regio{background:#fff;border:1px solid var(--n100);border-radius:16px;padding:1.6rem;box-shadow:var(--shadow-sm)}
+.regio h3{color:var(--purple);font-size:1.15rem;margin-bottom:.5rem}
+.regio .plaatsen{font-size:.9rem;color:var(--n500);line-height:1.7}
+.regio .reistijd{display:inline-block;margin-top:.8rem;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--teal-700);background:var(--teal-100);padding:4px 10px;border-radius:var(--radius-full)}
 /* Highlight / APK banner */
 .highlight{background:var(--grad);border-radius:24px;padding:clamp(2rem,5vw,3.5rem);color:#fff;position:relative;overflow:hidden}
 .highlight h2{color:#fff}
@@ -270,6 +392,7 @@ img{max-width:100%;display:block}
         <a href="diensten.html">Diensten</a>
         <div class="submenu"><ul class="submenu-inner">
             <li><a href="relatietherapie.html">Relatietherapie</a></li>
+            <li><a href="eft-relatietherapie.html">EFT-relatietherapie</a></li>
             <li><a href="individuele-coaching.html">Individuele Coaching</a></li>
             <li><a href="burn-out-stress-coaching.html">Burn-out &amp; Stress Coaching</a></li>
             <li><a href="kennismaking.html">Kennismaking</a></li>
@@ -286,6 +409,7 @@ img{max-width:100%;display:block}
     <a href="over-deborah.html">Over Deborah</a>
     <a href="diensten.html">Diensten</a>
     <a href="relatietherapie.html" class="msub">— Relatietherapie</a>
+    <a href="eft-relatietherapie.html" class="msub">— EFT-relatietherapie</a>
     <a href="individuele-coaching.html" class="msub">— Individuele Coaching</a>
     <a href="burn-out-stress-coaching.html" class="msub">— Burn-out &amp; Stress Coaching</a>
     <a href="kennismaking.html" class="msub">— Kennismaking</a>
@@ -415,9 +539,10 @@ img{max-width:100%;display:block}
         <h4>Diensten</h4>
         <ul class="footer-links">
           <li><a href="relatietherapie.html">Relatietherapie</a></li>
+          <li><a href="eft-relatietherapie.html">EFT-relatietherapie</a></li>
           <li><a href="individuele-coaching.html">Individuele Coaching</a></li>
           <li><a href="burn-out-stress-coaching.html">Burn-out &amp; Stress Coaching</a></li>
-          <li><a href="kennismaking.html">Kennismaking</a></li>
+          <li><a href="werkgebied.html">Werkgebied</a></li>
         </ul>
       </div>
       <div class="footer-contact">
