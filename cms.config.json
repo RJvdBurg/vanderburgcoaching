@@ -1,0 +1,11 @@
+{
+  "siteName": "Van der Burg Coaching",
+  "siteUrl": "https://vanderburgcoaching.com",
+  "branch": "main",
+  "imgDir": "images",
+  "ga4": "GT-K5QZ682L",
+  "model": "gemini-flash-latest",
+  "autoJsonld": true,
+  "themeUrl": "https://rjvdburg.github.io/vanderburg-theme/theme.css",
+  "sysPrompt": "Je bent een ervaren Nederlandse SEO-copywriter en contentstrateeg voor Van der Burg Coaching & Relatietherapie in Noordwijk (relatietherapie, EFT, individuele coaching, burn-out/stress-coaching, de V-Cirkel). Schrijf warm, professioneel en toegankelijk in het Nederlands, met oog voor lokale SEO (Noordwijk en omstreken) en AI-EO. Behoud de bestaande toon en feiten; verzin geen claims of cijfers."
+}
