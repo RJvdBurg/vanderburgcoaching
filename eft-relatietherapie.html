@@ -429,6 +429,11 @@ img{max-width:100%;display:block}
 .btn-wa{background:#25D366;color:#fff}
 .btn-wa:hover{background:#1fb955;color:#fff;transform:translateY(-2px)}
 .btn-wa svg{width:18px;height:18px;fill:#fff;flex-shrink:0}
+
+/* Site-breedte centreren op brede schermen */
+html{background:#fff}
+body{max-width:1500px;margin-inline:auto;overflow-x:clip}
+.site-header{left:50%;right:auto;transform:translateX(-50%);width:min(100%,1500px)}
 </style>
 </head>
 <body>
