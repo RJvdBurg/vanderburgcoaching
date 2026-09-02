@@ -28,12 +28,16 @@ Het logo en andere merk-assets staan in [`assets/`](assets/) van **deze** repo (
 | [`vanderburg-theme`](https://github.com/RJvdBurg/vanderburg-theme) | Gedeeld design — `theme.css` + `theme.js` + generieke default-assets (Pages) |
 | `vanderburgcoaching` (deze repo) | Content-pagina's + `assets/` + `cms.config.json` + `site.json` |
 
-Elke pagina linkt `theme.css` en `theme.js` van het theme via absolute URL. `theme.js` leest
-`site.json` en bouwt daarmee de header/footer/WhatsApp — dus **één theme kan meerdere sites
-aansturen**. Een nieuwe site = eigen content + eigen `assets/` + eigen `site.json`.
+De gepubliceerde pagina's zijn **platte, self-contained HTML**: theme.css staat inline, de
+header/footer/WhatsApp zijn vast ingebakken, en er is **geen** runtime-afhankelijkheid van de
+theme-repo. 10-jaar-proof.
 
-Alles is volledig statisch en draait op GitHub Pages — geen build-stap, geen backend.
+Het theme (`theme.css` + `theme.js` + `site.json`) is de **bron** waaruit gebakken wordt — niet
+iets dat de live site op runtime ophaalt. Werkwijze:
 
-> Doel op termijn: de CMS bakt het theme + `site.json` + content bij publiceren in tot
-> **self-contained platte HTML** (inline CSS, vaste header/footer) — dan is er ook geen
-> runtime-afhankelijkheid van het theme meer.
+- **Content wijzigen** → bewerk de pagina in de CMS en publiceer.
+- **Design/menu/footer wijzigen** → pas `site.json` of `theme.css`/`theme.js` aan en klik in de
+  CMS op **🧱 Platte HTML** → alle pagina's worden opnieuw gebakken (de `<main>`-content blijft).
+
+Zo stuurt **één theme meerdere sites** aan (elke site eigen `site.json` + `assets/`), terwijl de
+output altijd platte HTML op GitHub Pages is — geen build-toolchain, geen backend.
