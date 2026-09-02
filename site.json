@@ -1,0 +1,145 @@
+{
+  "brand": "Van der Burg Coaching",
+  "logo": "assets/vanderburg-logo.svg",
+  "logoWhite": "assets/vanderburg-logo-white.svg",
+  "logoAlt": "Van der Burg Coaching & Relatietherapie",
+  "cta": {
+    "label": "Gratis Kennismaking",
+    "href": "contact.html"
+  },
+  "nav": [
+    {
+      "href": "index.html",
+      "label": "Home"
+    },
+    {
+      "href": "over-deborah.html",
+      "label": "Over Deborah"
+    },
+    {
+      "href": "diensten.html",
+      "label": "Diensten",
+      "sub": [
+        {
+          "href": "relatietherapie.html",
+          "label": "Relatietherapie"
+        },
+        {
+          "href": "eft-relatietherapie.html",
+          "label": "EFT-relatietherapie"
+        },
+        {
+          "href": "individuele-coaching.html",
+          "label": "Individuele Coaching"
+        },
+        {
+          "href": "v-cirkel-coaching.html",
+          "label": "V-Cirkel Coaching"
+        },
+        {
+          "href": "burn-out-stress-coaching.html",
+          "label": "Burn-out & Stress Coaching"
+        },
+        {
+          "href": "kennismaking.html",
+          "label": "Kennismaking"
+        }
+      ]
+    },
+    {
+      "href": "tarieven.html",
+      "label": "Tarieven"
+    },
+    {
+      "href": "contact.html",
+      "label": "Contact"
+    }
+  ],
+  "footer": {
+    "tagline": "Waar zelfkennis de basis vormt voor groei. Ontdek wie je bent en versterk je relaties.",
+    "columns": [
+      {
+        "title": "Navigatie",
+        "links": [
+          {
+            "href": "index.html",
+            "label": "Home"
+          },
+          {
+            "href": "over-deborah.html",
+            "label": "Over Deborah"
+          },
+          {
+            "href": "diensten.html",
+            "label": "Diensten"
+          },
+          {
+            "href": "tarieven.html",
+            "label": "Tarieven"
+          },
+          {
+            "href": "contact.html",
+            "label": "Contact"
+          }
+        ]
+      },
+      {
+        "title": "Diensten",
+        "links": [
+          {
+            "href": "relatietherapie.html",
+            "label": "Relatietherapie"
+          },
+          {
+            "href": "eft-relatietherapie.html",
+            "label": "EFT-relatietherapie"
+          },
+          {
+            "href": "v-cirkel-coaching.html",
+            "label": "V-Cirkel Coaching"
+          },
+          {
+            "href": "individuele-coaching.html",
+            "label": "Individuele Coaching"
+          },
+          {
+            "href": "burn-out-stress-coaching.html",
+            "label": "Burn-out & Stress Coaching"
+          },
+          {
+            "href": "werkgebied.html",
+            "label": "Werkgebied"
+          }
+        ]
+      }
+    ],
+    "contact": {
+      "title": "Contact",
+      "address": [
+        "Offemweg 47",
+        "2201 HB Noordwijk"
+      ],
+      "phone": "085-1249076",
+      "phoneHref": "tel:+31851249076",
+      "email": "deborah@vanderburgcoaching.com"
+    },
+    "bottom": "© 2026 Van der Burg Coaching & Relatietherapie · Noordwijk"
+  },
+  "social": [
+    {
+      "label": "LinkedIn",
+      "short": "in",
+      "href": "https://www.linkedin.com/in/deborah-van-der-burg-27343b9/"
+    },
+    {
+      "label": "Instagram",
+      "short": "ig",
+      "href": "https://www.instagram.com/vanderburg_coaching/"
+    }
+  ],
+  "whatsapp": {
+    "number": "31851249076",
+    "text": "Hoi Deborah, ik heb een vraag.",
+    "label": "Hoe kan ik je helpen?"
+  }
+}
